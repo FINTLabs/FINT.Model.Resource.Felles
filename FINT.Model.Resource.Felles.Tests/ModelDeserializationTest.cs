@@ -13,6 +13,8 @@ namespace FINT.Model.Resource.Felles.Tests
             var result = JsonConvert.DeserializeObject<Person>(File.ReadAllText(@"./TestData/person.json"));
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Bostedsadresse);
+            Assert.NotNull(result.Postadresse);
         }
 
 
@@ -22,6 +24,8 @@ namespace FINT.Model.Resource.Felles.Tests
             var result = JsonConvert.DeserializeObject<Person>(File.ReadAllText(@"./TestData/personresource.json"));
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Bostedsadresse);
+            Assert.NotNull(result.Postadresse);
         }
 
         [Fact(DisplayName = "Read Person from personresource.json with MissingMemberHandling set to Error")]
@@ -43,6 +47,8 @@ namespace FINT.Model.Resource.Felles.Tests
                 JsonConvert.DeserializeObject<Person>(File.ReadAllText(@"./TestData/personresourcelinks.json"));
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Bostedsadresse);
+            Assert.NotNull(result.Postadresse);
         }
 
         [Fact(DisplayName = "Read Person from personresourcelinks.json with MissingMemberHandling set to Error")]
@@ -63,6 +69,8 @@ namespace FINT.Model.Resource.Felles.Tests
             var result = JsonConvert.DeserializeObject<PersonResource>(File.ReadAllText(@"./TestData/person.json"));
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Bostedsadresse);
+            Assert.NotNull(result.Postadresse);
         }
 
         [Fact(DisplayName = "Read PersonResource from personresource.json")]
@@ -72,6 +80,9 @@ namespace FINT.Model.Resource.Felles.Tests
                 JsonConvert.DeserializeObject<PersonResource>(File.ReadAllText(@"./TestData/personresource.json"));
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Bostedsadresse);
+            Assert.NotNull(result.Postadresse);
+            Assert.Single(result.Links["kjonn"]);
         }
 
         [Fact(DisplayName = "Read PersonResource from personresourcelinks.json")]
@@ -83,6 +94,9 @@ namespace FINT.Model.Resource.Felles.Tests
             Assert.NotNull(result);
             Assert.NotNull(result.Bostedsadresse);
             Assert.NotNull(result.Postadresse);
+            Assert.Single(result.Links["kjonn"]);
+            Assert.Single(result.Bostedsadresse.Links["land"]);
+            Assert.Single(result.Postadresse.Links["land"]);
         }
 
         [Fact(DisplayName = "Read PersonResources from personresourceslinks.json")]
