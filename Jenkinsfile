@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh 'git clean -fdx'
         sh 'dotnet restore'
+		sh 'dotnet test'
         sh 'dotnet build -c Release'
         sh 'dotnet pack -c Release'
         stash includes: '**/Release/*.nupkg', name: 'libs'
