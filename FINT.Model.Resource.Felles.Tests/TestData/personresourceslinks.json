@@ -1,0 +1,64 @@
+﻿{
+  "_embedded": {
+    "_entries": [
+      {
+        "bostedsadresse": {
+          "adresselinje": [
+            "Storgata 12"
+          ],
+          "postnummer": "1234",
+          "poststed": "Test",
+          "_links": {
+            "land": [
+              {
+                "href": "/felles/land/systemid/no"
+              }
+            ]
+          }
+        },
+        "postadresse": {
+          "adresselinje": [
+            "Storgata 12"
+          ],
+          "postnummer": "1234",
+          "poststed": "Test",
+          "_links": {
+            "land": [
+              {
+                "href": "/felles/land/systemid/no"
+              }
+            ]
+          }
+        },
+        "fodselsdato": "2018-04-05T14:51:20Z",
+        "fodselsnummer": {
+          "identifikatorverdi": "12345678901"
+        },
+        "navn": {
+          "etternavn": "Test",
+          "fornavn": "Tore"
+        },
+        "_links": {
+          "statsborgerskap": [
+            {
+              "href": "/felles/land/systemid/no"
+            }
+          ],
+          "kjonn": [
+            {
+              "href": "/felles/kjonn/systemid/1"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "http://localhost:8080"
+      }
+    ]
+  },
+  "total_items": 1
+}

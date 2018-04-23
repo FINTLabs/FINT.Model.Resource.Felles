@@ -1,0 +1,29 @@
+﻿{
+  "bostedsadresse": {
+    "adresselinje": [
+      "Storgata 12"
+    ],
+    "postnummer": "1234",
+    "poststed": "Test"
+  },
+  "fodselsdato": "2018-04-05T14:51:20Z",
+  "fodselsnummer": {
+    "identifikatorverdi": "12345678901"
+  },
+  "navn": {
+    "etternavn": "Test",
+    "fornavn": "Tore"
+  },
+  "_links": {
+    "statsborgerskap": [
+      {
+        "href": "/felles/land/systemid/no"
+      }
+    ],
+    "kjonn": [
+      {
+        "href": "/felles/kjonn/systemid/1"
+      }
+    ]
+  }
+}

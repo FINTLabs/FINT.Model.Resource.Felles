@@ -18,7 +18,7 @@ namespace FINT.Model.Felles.Basisklasser
         public Dictionary<string, List<Link>> Links { get; private set; }
 
         public Kontaktinformasjon Kontaktinformasjon { get; set; }
-        public KommuneResource Postadresse { get; set; }
+        public AdresseResource Postadresse { get; set; }
 
         private void AddLink(string key, Link link)
         {

@@ -2,7 +2,7 @@
 
 namespace FINT.Model.Felles.Kompleksedatatyper
 {
-    public class KommuneResources : AbstractCollectionResources<KommuneResource>
+    public class AdresseResources : AbstractCollectionResources<AdresseResource>
     {
     }
 }

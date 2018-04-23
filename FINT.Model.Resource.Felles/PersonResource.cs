@@ -21,7 +21,7 @@ namespace FINT.Model.Felles
         public Dictionary<string, List<Link>> Links { get; private set; }
 
         public string Bilde { get; set; }
-        public KommuneResource Bostedsadresse { get; set; }
+        public AdresseResource Bostedsadresse { get; set; }
         public DateTime? Fodselsdato { get; set; }
         public Identifikator Fodselsnummer { get; set; }
         public Personnavn Navn { get; set; }

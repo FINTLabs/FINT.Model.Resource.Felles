@@ -17,7 +17,7 @@ namespace FINT.Model.Felles.Basisklasser
         [JsonProperty(PropertyName = "_links")]
         public Dictionary<string, List<Link>> Links { get; private set; }
 
-        public KommuneResource Forretningsadresse { get; set; }
+        public AdresseResource Forretningsadresse { get; set; }
         public string Organisasjonsnavn { get; set; }
         public Identifikator Organisasjonsnummer { get; set; }
 

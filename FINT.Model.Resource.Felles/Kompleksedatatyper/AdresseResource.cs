@@ -6,9 +6,9 @@ using Newtonsoft.Json;
 
 namespace FINT.Model.Felles.Kompleksedatatyper
 {
-    public class KommuneResource
+    public class AdresseResource
     {
-        public KommuneResource()
+        public AdresseResource()
         {
             Links = new Dictionary<string, List<Link>>();
         }
