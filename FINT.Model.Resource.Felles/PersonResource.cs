@@ -18,7 +18,7 @@ namespace FINT.Model.Felles
 
 
         [JsonProperty(PropertyName = "_links")]
-        public Dictionary<string, List<Link>> Links { get; private set; }
+        public new Dictionary<string, List<Link>> Links { get; private set; }
 
         public string Bilde { get; set; }
         public AdresseResource Bostedsadresse { get; set; }
