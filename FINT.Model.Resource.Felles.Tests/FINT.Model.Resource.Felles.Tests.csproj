@@ -27,11 +27,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FINT.Model.Felles, Version=2.7.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\..\.nuget\packages\fint.model.felles\2.7.0\lib\netstandard1.4\FINT.Model.Felles.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FINT.Model.Resource.Felles\FINT.Model.Resource.Felles.csproj" />
   </ItemGroup>
 </Project>

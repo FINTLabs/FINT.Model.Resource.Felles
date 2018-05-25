@@ -1,4 +1,4 @@
-// Built from tag v2.7.0
+// Built from tag v2.8.0
 
 using System.Collections.Generic;
 using FINT.Model.Resource;
