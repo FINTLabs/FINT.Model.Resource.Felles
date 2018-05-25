@@ -82,6 +82,7 @@ namespace FINT.Model.Resource.Felles.Tests
             Assert.NotNull(result);
             Assert.NotNull(result.Bostedsadresse);
             Assert.NotNull(result.Postadresse);
+            Assert.Equal(3, result.Links.Count);
             Assert.Single(result.Links["kjonn"]);
         }
 
@@ -111,6 +112,19 @@ namespace FINT.Model.Resource.Felles.Tests
             Assert.Single(result.GetSelfLinks());
             Assert.NotNull(result.GetContent()[0].Bostedsadresse);
             Assert.NotNull(result.GetContent()[0].Postadresse);
+        }
+
+        [Fact(DisplayName = "Read KontaktpersonResource from kontaktpersonresource.json")]
+        public void Read_KontaktpersonResource_from_kontaktpersonresource_json()
+        {
+            var result =
+                JsonConvert.DeserializeObject<KontaktpersonResource>(
+                    File.ReadAllText(@"./TestData/kontaktpersonresource.json"));
+
+            Assert.NotNull(result);
+            Assert.True(result.Foreldreansvar);
+            Assert.Equal("forelder", result.Type);
+            Assert.Equal(2, result.Links.Count);
         }
     }
 }

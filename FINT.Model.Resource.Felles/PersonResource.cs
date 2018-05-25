@@ -63,5 +63,10 @@ namespace FINT.Model.Felles
         {
             AddLink("elev", link);
         }
+
+        public void AddParorende(Link link)
+        {
+            AddLink("parorende", link);
+        }
     }
 }

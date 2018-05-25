@@ -6,7 +6,7 @@
     <PackageTags>fint</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="FINT.Model.Felles" Version="2.7.0" />
-    <PackageReference Include="FINT.Model.Resource" Version="1.0.0-RC.1" />
+    <PackageReference Include="FINT.Model.Felles" Version="2.8.0" />
+    <PackageReference Include="FINT.Model.Resource" Version="1.0.1" />
   </ItemGroup>
 </Project>
