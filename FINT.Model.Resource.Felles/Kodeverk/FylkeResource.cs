@@ -10,11 +10,10 @@ using FINT.Model.Felles.Basisklasser;
 namespace FINT.Model.Felles.Kodeverk
 {
 
-	public class FylkeResource : Begrep 
-	{
+    public class FylkeResource : Begrep 
+    {
 
-        
-        
+    
         public FylkeResource()
         {
             Links = new Dictionary<string, List<Link>>();
@@ -22,8 +21,8 @@ namespace FINT.Model.Felles.Kodeverk
 
         [JsonProperty(PropertyName = "_links")]
         public new Dictionary<string, List<Link>> Links { get; private set; }
-        
-        private void AddLink(string key, Link link)
+
+        protected void AddLink(string key, Link link)
         {
             if (!Links.ContainsKey(key))
             {
@@ -31,6 +30,7 @@ namespace FINT.Model.Felles.Kodeverk
             }
             Links[key].Add(link);
         }
+     
             
 
         public void AddKommune(Link link)

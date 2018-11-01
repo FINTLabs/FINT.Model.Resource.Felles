@@ -10,10 +10,9 @@ pipeline {
       }
       steps {
         sh 'git clean -fdx'
-        sh 'dotnet restore'
+        sh 'dotnet msbuild -t:restore -p:RestoreSources="https://api.nuget.org/v3/index.json;https://api.bintray.com/nuget/fint/nuget" FINT.Model.Resource.Felles.sln'
         sh 'dotnet test FINT.Model.Resource.Felles.Tests'
-        sh 'dotnet build -c Release'
-        sh 'dotnet pack -c Release'
+        sh 'dotnet msbuild -t:build,pack -p:Configuration=Release FINT.Model.Resource.Felles.sln'
         stash includes: '**/Release/*.nupkg', name: 'libs'
       }
     }
