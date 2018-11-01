@@ -1,13 +1,13 @@
 pipeline {
-  agent none
+  agent {
+    docker {
+      label 'docker'
+      image 'microsoft/dotnet'
+    }
+  }
+
   stages {
     stage('Build') {
-      agent {
-        docker {
-          label 'docker'
-          image 'microsoft/dotnet'
-        }
-      }
       steps {
         sh 'git clean -fdx'
         sh 'dotnet msbuild -t:restore -p:RestoreSources="https://api.nuget.org/v3/index.json;https://api.bintray.com/nuget/fint/nuget" FINT.Model.Resource.Felles.sln'
@@ -18,12 +18,6 @@ pipeline {
     }
 
     stage('Deploy') {
-      agent {
-        docker {
-          label 'docker'
-          image 'microsoft/dotnet'
-        }
-      }
       environment {
         BINTRAY = credentials('fint-bintray')
       }
