@@ -20,7 +20,7 @@ namespace FINT.Model.Felles.Kodeverk
         }
 
         [JsonProperty(PropertyName = "_links")]
-        public new Dictionary<string, List<Link>> Links { get; private set; }
+        public Dictionary<string, List<Link>> Links { get; private set; }
 
         protected void AddLink(string key, Link link)
         {
