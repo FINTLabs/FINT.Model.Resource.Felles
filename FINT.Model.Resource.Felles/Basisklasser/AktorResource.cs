@@ -10,13 +10,12 @@ using FINT.Model.Felles.Kompleksedatatyper;
 namespace FINT.Model.Felles.Basisklasser
 {
 
-	public abstract class AktorResource 
-	{
+    public abstract class AktorResource 
+    {
 
-        
-		public Kontaktinformasjon Kontaktinformasjon { get; set; }
-		public AdresseResource Postadresse { get; set; }
-		
+    
+        public Kontaktinformasjon Kontaktinformasjon { get; set; }
+        public AdresseResource Postadresse { get; set; }
         
         public AktorResource()
         {
@@ -25,8 +24,8 @@ namespace FINT.Model.Felles.Basisklasser
 
         [JsonProperty(PropertyName = "_links")]
         public Dictionary<string, List<Link>> Links { get; private set; }
-        
-        private void AddLink(string key, Link link)
+
+        protected void AddLink(string key, Link link)
         {
             if (!Links.ContainsKey(key))
             {
@@ -34,5 +33,6 @@ namespace FINT.Model.Felles.Basisklasser
             }
             Links[key].Add(link);
         }
+     
     }
 }
