@@ -1,4 +1,4 @@
-// Built from tag v3.1.0
+// Built from tag v3.2.0-rc-1
 
 using System;
 using System.Collections.Generic;
@@ -8,14 +8,13 @@ using FINT.Model.Resource;
 namespace FINT.Model.Felles.Kompleksedatatyper
 {
 
-	public class AdresseResource 
-	{
+    public class AdresseResource 
+    {
 
-        
-		public List<string> Adresselinje { get; set; }
-		public string Postnummer { get; set; }
-		public string Poststed { get; set; }
-		
+    
+        public List<string> Adresselinje { get; set; }
+        public string Postnummer { get; set; }
+        public string Poststed { get; set; }
         
         public AdresseResource()
         {
@@ -24,8 +23,8 @@ namespace FINT.Model.Felles.Kompleksedatatyper
 
         [JsonProperty(PropertyName = "_links")]
         public Dictionary<string, List<Link>> Links { get; private set; }
-        
-        private void AddLink(string key, Link link)
+
+        protected void AddLink(string key, Link link)
         {
             if (!Links.ContainsKey(key))
             {
@@ -33,6 +32,7 @@ namespace FINT.Model.Felles.Kompleksedatatyper
             }
             Links[key].Add(link);
         }
+     
             
 
         public void AddLand(Link link)

@@ -1,4 +1,4 @@
-// Built from tag v3.1.0
+// Built from tag v3.2.0-rc-1
 
 using System;
 using System.Collections.Generic;
@@ -10,14 +10,15 @@ using FINT.Model.Felles.Kompleksedatatyper;
 namespace FINT.Model.Felles
 {
 
-	public class KontaktpersonResource 
-	{
+    public class KontaktpersonResource 
+    {
 
-        
-		public bool Foreldreansvar { get; set; }
-		public Identifikator SystemId { get; set; }
-		public string Type { get; set; }
-		
+    
+        public bool Foreldreansvar { get; set; }
+        public Kontaktinformasjon Kontaktinformasjon { get; set; }
+        public Personnavn Navn { get; set; }
+        public Identifikator SystemId { get; set; }
+        public string Type { get; set; }
         
         public KontaktpersonResource()
         {
@@ -26,8 +27,8 @@ namespace FINT.Model.Felles
 
         [JsonProperty(PropertyName = "_links")]
         public Dictionary<string, List<Link>> Links { get; private set; }
-        
-        private void AddLink(string key, Link link)
+
+        protected void AddLink(string key, Link link)
         {
             if (!Links.ContainsKey(key))
             {
@@ -35,6 +36,7 @@ namespace FINT.Model.Felles
             }
             Links[key].Add(link);
         }
+     
             
 
         public void AddKontaktperson(Link link)
